@@ -23,4 +23,11 @@ export default defineConfig({
   },
   hash: true,
   // base: PUBLic_PATH,
+  proxy: {
+    '/nodeapi': {
+      target: 'http://localhost:3000/',
+      changeOrigin: true, // 允许域名进行转换
+      pathRewrite: { '^~/nodeapi': '' }, // 将请求url里的ci去掉
+    },
+  },
 });

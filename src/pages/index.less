@@ -5,7 +5,31 @@
 .aaa {
   width: 1200px;
   height: 100vh;
+  margin: 0 auto;
   .content {
     height: 90%;
+  }
+}
+
+.custom {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(3, 121, 255, 0.8);
+  position: relative;
+  .customChild {
+    background-color: #ffff99;
+    color: #333;
+    padding: 5px;
+    display: none;
+    position: absolute;
+    bottom: 12px;
+    // text-align: center;
+    width: 180px;
+  }
+  &:hover {
+    .customChild {
+      display: block;
+    }
   }
 }
